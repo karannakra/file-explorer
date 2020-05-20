@@ -1,0 +1,19 @@
+var obj= {counter:0};
+Object.defineProperty(obj,'reset',{
+    get:function(){this.counter=0;}
+});
+Object.defineProperty(obj,'increament',{
+    get:function(){this.counter++;}
+});
+Object.defineProperty(obj,'decreament',{
+    get:function(){this.counter--;}
+});
+Object.defineProperty(obj,'add',{
+    set:function(value){this.counter+=value;}
+});
+Object.defineProperty()(obj,'subtract',{
+    set:function(value){this.counter-=value;}
+});
+obj.reset;
+obj.add=5;
+document.getElementById('demo').innerHTML=obj.counter;

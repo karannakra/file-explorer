@@ -1,0 +1,1 @@
+console.log(parseInt(Math.log10(1024000)))
